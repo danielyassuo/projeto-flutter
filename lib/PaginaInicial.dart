@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:untitled/PesquisaReceita.dart';
 
 class PaginaInicial extends StatelessWidget {
   const PaginaInicial({super.key});
@@ -28,7 +29,7 @@ class PaginaInicial extends StatelessWidget {
                   CircleAvatar(
                     radius: 40,
                     backgroundColor: Colors.blue,
-                    child: Icon(Icons.school, size: 40, color: Colors.white),
+                    child: Icon(Icons.restaurant_menu, size: 40, color: Colors.white),
                   ),
                   SizedBox(height: 16),
                   Text(
@@ -38,7 +39,7 @@ class PaginaInicial extends StatelessWidget {
                   ),
                   SizedBox(height: 8),
                   Text(
-                    'Aprenda e pratique.',
+                    'Descubra Receitas.',
                     textAlign: TextAlign.center,
                     style: TextStyle(fontSize: 16),
                   ),
@@ -47,43 +48,47 @@ class PaginaInicial extends StatelessWidget {
             ),
             SizedBox(height: 24),
             Text(
-              'O que você quer fazer hoje?',
+              'O que você quer cozinhar hoje?',
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
             SizedBox(height: 12),
             Card(
               child: ListTile(
-                leading: Icon(Icons.menu_book, color: Colors.blue),
-                title: Text('Conteúdos'),
-                subtitle: Text('Revise as matérias'),
+                leading: Icon(Icons.list, color: Colors.blue),
+                title: Text('Receitas'),
+                subtitle: Text('Veja todas as receitas'),
                 trailing: Icon(Icons.arrow_forward_ios),
               ),
             ),
             Card(
               child: ListTile(
-                leading: Icon(Icons.quiz, color: Colors.blue),
-                title: Text('Exercícios'),
-                subtitle: Text('Teste seus conhecimentos'),
+                leading: Icon(Icons.search, color: Colors.blue),
+                title: Text('Pesquisar'),
+                subtitle: Text('Busque uma receita pelo nome'),
                 trailing: Icon(Icons.arrow_forward_ios),
               ),
             ),
             Card(
               child: ListTile(
-                leading: Icon(Icons.person, color: Colors.blue),
-                title: Text('Perfil'),
-                subtitle: Text('Veja seu progresso'),
+                leading: Icon(Icons.favorite, color: Colors.blue),
+                title: Text('Favoritos'),
+                subtitle: Text('Suas receitas salvas'),
                 trailing: Icon(Icons.arrow_forward_ios),
               ),
             ),
             SizedBox(height: 24),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => const Pesquisareceita()),
+                );
+              },
               style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue,
                 foregroundColor: Colors.white,
                 padding: const EdgeInsets.symmetric(vertical: 16),
               ),
-              child: Text('Começar', style: TextStyle(fontSize: 18)),
+              child: Text('Pesquisar receitas', style: TextStyle(fontSize: 18)),
             ),
           ],
         ),
