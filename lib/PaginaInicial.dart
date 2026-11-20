@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:untitled/PesquisaReceita.dart';
+import 'package:untitled/ListaReceitas.dart';
+import 'package:untitled/Favoritos.dart';
 
 class PaginaInicial extends StatelessWidget {
   const PaginaInicial({super.key});
@@ -58,6 +60,9 @@ class PaginaInicial extends StatelessWidget {
                 title: Text('Receitas'),
                 subtitle: Text('Veja todas as receitas'),
                 trailing: Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const ListaReceitas()));
+                },
               ),
             ),
             Card(
@@ -66,6 +71,9 @@ class PaginaInicial extends StatelessWidget {
                 title: Text('Pesquisar'),
                 subtitle: Text('Busque uma receita pelo nome'),
                 trailing: Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const Pesquisareceita()));
+                },
               ),
             ),
             Card(
@@ -74,6 +82,9 @@ class PaginaInicial extends StatelessWidget {
                 title: Text('Favoritos'),
                 subtitle: Text('Suas receitas salvas'),
                 trailing: Icon(Icons.arrow_forward_ios),
+                onTap: () {
+                  Navigator.push(context, MaterialPageRoute(builder: (_) => const Favoritos()));
+                },
               ),
             ),
             SizedBox(height: 24),

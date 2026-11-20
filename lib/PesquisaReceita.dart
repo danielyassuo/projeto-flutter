@@ -42,6 +42,8 @@ class _PesquisareceitaState extends State<Pesquisareceita> {
             ),
             const SizedBox(height: 16,),
             ElevatedButton(onPressed: pesquisar, style: ElevatedButton.styleFrom(backgroundColor: Colors.blue, foregroundColor: Colors.white) ,child: Text('Pesquisar')),
+            const SizedBox(height: 16,),
+            Text(resultado),
           ],
         ),
       ),
