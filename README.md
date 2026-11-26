@@ -1,17 +1,30 @@
-# untitled
+# Projeto bolinha — App de Receitas
 
-A new Flutter project.
+App em Flutter para ver receitas, pesquisar pelo nome, ler ingredientes e modo de preparo e salvar favoritas. Os dados vêm da API [DummyJSON Recipes](https://dummyjson.com/docs/recipes).
 
-## Getting Started
+## Funcionalidades
 
-This project is a starting point for a Flutter application.
+- Lista de receitas com foto e nota
+- Pesquisa pelo nome
+- Detalhes com ingredientes e modo de preparo
+- Favoritos durante o uso do app
+- Mensagens de carregamento, erro e "nenhum resultado"
 
-A few resources to get you started if this is your first Flutter project:
+Os detalhes usam a receita que já veio da lista, sem nova chamada à API.
 
-- [Learn Flutter](https://docs.flutter.dev/get-started/learn-flutter)
-- [Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Flutter learning resources](https://docs.flutter.dev/reference/learning-resources)
+## SDK e dependências
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Flutter 3.47.7
+- Dart 3.13.5
+- http ^1.6.0
+
+## Como executar
+
+```bash
+git clone https://github.com/danielyassuo/projeto-flutter.git
+cd projeto-flutter
+flutter pub get
+flutter run
+```
+
+É preciso ter um emulador aberto ou um celular conectado, e internet para carregar as receitas.
